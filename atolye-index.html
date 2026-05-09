@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atölye — Özel Giyim · İstanbul</title>
+  <meta name="description" content="Hazır giyim seni temsil etmiyorsa. Karaköy atölyemizde sıfırdan tasarlanan, senin ölçünde biçilen parçalar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================= -->
+  <nav id="nav" aria-label="Ana navigasyon">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">Atölye</a>
+
+        <ul class="nav-links">
+          <li><a href="#koleksiyon" class="active">Koleksiyon</a></li>
+          <li><a href="#ozel-siparis">Özel Sipariş</a></li>
+          <li><a href="#lookbook">Lookbook</a></li>
+          <li><a href="#hakkinda">Hakkında</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <button class="nav-icon-btn" aria-label="Ara" title="Ara">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+          <button class="nav-icon-btn" aria-label="Favoriler" title="Favoriler">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <button class="nav-icon-btn" aria-label="Sepet" title="Sepet" style="position:relative">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            <span class="cart-badge">2</span>
+          </button>
+          <a href="#ozel-siparis" class="btn-nav">Sipariş Ver</a>
+          <button class="hamburger" id="hamburger-btn" aria-label="Menü" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay Menu -->
+  <div id="mobile-menu" role="dialog" aria-modal="true">
+    <a href="#koleksiyon" class="mobile-nav-link">Koleksiyon</a>
+    <a href="#ozel-siparis" class="mobile-nav-link">Özel Sipariş</a>
+    <a href="#lookbook" class="mobile-nav-link">Lookbook</a>
+    <a href="#hakkinda" class="mobile-nav-link">Hakkında</a>
+    <a href="#blog" class="mobile-nav-link">Blog</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+  ============================================= -->
+  <section id="hero" aria-label="Ana banner">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grain"></div>
+    <!-- Dekoratif çizgiler -->
+    <div class="hero-line-v"></div>
+    <div class="hero-line-h"></div>
+    <!-- Watermark -->
+    <div class="hero-watermark" id="hero-watermark">Atölye</div>
+
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Yeni Sezon · Sonbahar 2025 · İstanbul, Karaköy</p>
+        <h1 class="hero-heading">Sana özel<br>biçilmiş.</h1>
+        <p class="hero-sub">Hazır giyim değil — senin ölçünde, senin fikrinle tasarlanan parçalar. Karaköy atölyemizde sıfırdan.</p>
+        <div class="hero-btns">
+          <a href="#koleksiyon" class="btn btn-primary">Koleksiyonu Gör</a>
+          <a href="#ozel-siparis" class="btn btn-outline-light">Özel Sipariş →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-indicator">
+      <span class="hero-scroll-text">Kaydır</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MARQUEE STRIP
+  ============================================= -->
+  <div class="brand-strip" aria-hidden="true">
+    <div class="brand-strip-inner">
+      <!-- Duplicated for infinite loop -->
+      <span class="brand-strip-item">El Yapımı</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Sıfırdan Tasarım</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Birebir Ölçü</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Ücretsiz Danışma</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Karaköy Atölyesi</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">10–14 İş Günü Teslim</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">El Yapımı</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Sıfırdan Tasarım</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Birebir Ölçü</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Ücretsiz Danışma</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">Karaköy Atölyesi</span>
+      <span class="brand-strip-item">·</span>
+      <span class="brand-strip-item">10–14 İş Günü Teslim</span>
+      <span class="brand-strip-item">·</span>
+    </div>
+  </div>
+
+  <!-- ============================================
+       KOLEKSİYON
+  ============================================= -->
+  <section id="koleksiyon" aria-labelledby="koleksiyon-baslik">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow reveal" style="margin-bottom:12px">05 — Koleksiyon</p>
+          <h2 class="section-heading reveal reveal-delay-1" id="koleksiyon-baslik">Sonbahar 2025</h2>
+        </div>
+        <a href="#" class="btn btn-outline-dark btn-sm reveal reveal-delay-2">Tümünü Gör →</a>
+      </div>
+
+      <!-- Filtre -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="dis-giyim">Dış Giyim</button>
+        <button class="filter-btn" data-filter="elbise">Elbise</button>
+        <button class="filter-btn" data-filter="takim">Takım</button>
+        <button class="filter-btn" data-filter="aksesuar">Aksesuar</button>
+        <button class="filter-btn" data-filter="ozel">Özel Sipariş</button>
+      </div>
+
+      <!-- Ürün Grid -->
+      <div class="products-grid" id="products-grid">
+
+        <!-- Ürün 1 -->
+        <article class="product-card reveal" data-category="dis-giyim">
+          <div class="card-image">
+            <span class="card-badge badge-new">Yeni</span>
+            <div class="card-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <rect width="300" height="380" fill="#E8E2D9"/>
+                <path d="M60 60 Q90 40 150 50 Q210 40 240 60 L235 300 Q200 340 150 345 Q100 340 65 300 Z" fill="#C4A882" opacity="0.35"/>
+                <path d="M80 70 Q105 55 150 62 Q195 55 220 70 L215 290 Q185 325 150 328 Q115 325 85 290 Z" fill="#8B7355" opacity="0.22"/>
+                <line x1="150" y1="50" x2="150" y2="345" stroke="#8B7355" stroke-width="0.8" opacity="0.4"/>
+                <path d="M60 60 L40 95 L80 110" fill="none" stroke="#C4A882" stroke-width="0.8" opacity="0.5"/>
+                <path d="M240 60 L260 95 L220 110" fill="none" stroke="#C4A882" stroke-width="0.8" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="card-overlay">
+              <button class="quick-add-btn" onclick="addToCart('Palazzo Palto')">Sepete Ekle</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Dış Giyim</p>
+            <h3 class="card-name">Palazzo Palto</h3>
+            <div class="card-footer">
+              <span class="card-price">₺4.800</span>
+              <button class="btn btn-ghost btn-sm">Detay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ürün 2 -->
+        <article class="product-card reveal reveal-delay-1" data-category="elbise">
+          <div class="card-image" style="background:#1A1714">
+            <div class="card-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <rect width="300" height="380" fill="#2C2420"/>
+                <path d="M80 30 Q130 20 150 28 Q170 20 220 30 L215 340 Q180 360 150 362 Q120 360 85 340 Z" fill="#C4A882" opacity="0.25"/>
+                <path d="M95 40 Q130 32 150 38 Q170 32 205 40 L200 330 Q172 348 150 350 Q128 348 100 330 Z" fill="#C4A882" opacity="0.15"/>
+                <line x1="80" y1="30" x2="100" y2="10" stroke="#C4A882" stroke-width="0.6" opacity="0.4"/>
+                <line x1="220" y1="30" x2="200" y2="10" stroke="#C4A882" stroke-width="0.6" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="card-overlay">
+              <button class="quick-add-btn" onclick="addToCart('Asimetrik Midi')">Sepete Ekle</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Elbise</p>
+            <h3 class="card-name">Asimetrik Midi</h3>
+            <div class="card-footer">
+              <span class="card-price">₺3.200</span>
+              <span class="card-price-old">₺4.100</span>
+              <button class="btn btn-ghost btn-sm">Detay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ürün 3 -->
+        <article class="product-card reveal reveal-delay-2" data-category="takim">
+          <div class="card-image" style="background:#E8E2D9">
+            <span class="card-badge badge-special">Özel</span>
+            <div class="card-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <rect width="300" height="380" fill="#E8E2D9"/>
+                <rect x="70" y="50" width="160" height="240" rx="2" fill="#8B7355" opacity="0.18"/>
+                <rect x="110" y="30" width="40" height="30" rx="1" fill="#8B7355" opacity="0.28"/>
+                <rect x="155" y="30" width="40" height="30" rx="1" fill="#8B7355" opacity="0.28"/>
+                <line x1="70" y1="160" x2="230" y2="160" stroke="#8B7355" stroke-width="0.7" opacity="0.4"/>
+                <line x1="150" y1="160" x2="150" y2="290" stroke="#8B7355" stroke-width="0.5" opacity="0.3"/>
+                <rect x="110" y="175" width="22" height="28" rx="1" fill="#C4A882" opacity="0.3"/>
+                <rect x="168" y="175" width="22" height="28" rx="1" fill="#C4A882" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="card-overlay">
+              <button class="quick-add-btn" onclick="addToCart('Keten Ceket')">Sepete Ekle</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Takım Elbise</p>
+            <h3 class="card-name">Keten Ceket</h3>
+            <div class="card-footer">
+              <span class="card-price">₺6.500</span>
+              <button class="btn btn-ghost btn-sm">Detay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ürün 4 -->
+        <article class="product-card reveal reveal-delay-1" data-category="dis-giyim">
+          <div class="card-image" style="background:#2C2420">
+            <span class="card-badge badge-limited">Sınırlı</span>
+            <div class="card-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <rect width="300" height="380" fill="#2C2420"/>
+                <path d="M55 70 Q90 45 150 55 Q210 45 245 70 L248 320 Q210 355 150 358 Q90 355 52 320 Z" fill="#C4A882" opacity="0.2"/>
+                <path d="M55 70 L30 100 L65 115 M245 70 L270 100 L235 115" fill="none" stroke="#C4A882" stroke-width="0.7" opacity="0.5"/>
+                <rect x="125" y="85" width="50" height="60" rx="1" fill="#C4A882" opacity="0.15"/>
+              </svg>
+            </div>
+            <div class="card-overlay">
+              <button class="quick-add-btn" onclick="addToCart('Yünlü Kaban')">Sepete Ekle</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Dış Giyim</p>
+            <h3 class="card-name">Yünlü Kaban</h3>
+            <div class="card-footer">
+              <span class="card-price">₺7.200</span>
+              <button class="btn btn-ghost btn-sm">Detay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ürün 5 -->
+        <article class="product-card reveal reveal-delay-2" data-category="elbise">
+          <div class="card-image">
+            <div class="card-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <rect width="300" height="380" fill="#F5F2EE"/>
+                <path d="M100 50 L200 50 L220 380 L80 380 Z" fill="#8B7355" opacity="0.15"/>
+                <path d="M115 50 L185 50 L200 380 L100 380 Z" fill="#C4A882" opacity="0.2"/>
+                <line x1="100" y1="50" x2="80" y2="20" stroke="#8B7355" stroke-width="0.6" opacity="0.4"/>
+                <line x1="200" y1="50" x2="220" y2="20" stroke="#8B7355" stroke-width="0.6" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="card-overlay">
+              <button class="quick-add-btn" onclick="addToCart('Saten Kolsuz')">Sepete Ekle</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Elbise</p>
+            <h3 class="card-name">Saten Kolsuz</h3>
+            <div class="card-footer">
+              <span class="card-price">₺2.900</span>
+              <button class="btn btn-ghost btn-sm">Detay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ürün 6 -->
+        <article class="product-card reveal reveal-delay-3" data-category="takim">
+          <div class="card-image" style="background:#C4A882">
+            <span class="card-badge badge-new">Yeni</span>
+            <div class="card-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+                <rect width="300" height="380" fill="#C4A882"/>
+                <rect x="65" y="80" width="170" height="200" fill="#1A1714" opacity="0.2"/>
+                <rect x="65" y="80" width="170" height="90" fill="#1A1714" opacity="0.12"/>
+                <line x1="150" y1="80" x2="150" y2="280" stroke="#1A1714" stroke-width="0.8" opacity="0.25"/>
+                <rect x="100" y="270" width="45" height="120" fill="#1A1714" opacity="0.15"/>
+                <rect x="155" y="270" width="45" height="120" fill="#1A1714" opacity="0.15"/>
+              </svg>
+            </div>
+            <div class="card-overlay">
+              <button class="quick-add-btn" onclick="addToCart('Klasik Takım')">Sepete Ekle</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">Takım Elbise</p>
+            <h3 class="card-name">Klasik Takım</h3>
+            <div class="card-footer">
+              <span class="card-price">₺9.800</span>
+              <button class="btn btn-ghost btn-sm">Detay</button>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /products-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================
+       SİPARİŞ SÜRECİ
+  ============================================= -->
+  <section id="surec" aria-labelledby="surec-baslik">
+    <div class="container surec-inner">
+      <div class="surec-header">
+        <p class="eyebrow reveal">08 — Şeffaf Süreç</p>
+        <h2 class="section-heading reveal reveal-delay-1" id="surec-baslik" style="color:var(--cw)">Fikrinden<br>kapına gelişine kadar.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <p class="step-name">Fikir</p>
+          <p class="step-desc">Referansın ve hayalindeki parçayı anlat. İstersen sadece bir kelime bile yeterli.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-number">02</div>
+          <p class="step-name">Eskiz</p>
+          <p class="step-desc">48 saat içinde ilk taslak tasarım ve kumaş önerilerini e-posta ile alırsın.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-number">03</div>
+          <p class="step-name">Üretim</p>
+          <p class="step-desc">El seçimi kumaşlar ve birebir ölçülerinle Karaköy atölyesinde üretim başlar.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-number">04</div>
+          <p class="step-name">Teslim</p>
+          <p class="step-desc">Özel ambalajla kapına gelir. 10–14 iş günü. Ücretsiz kargo ve iade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       LOOKBOOK
+  ============================================= -->
+  <section id="lookbook" aria-labelledby="lookbook-baslik">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow reveal" style="margin-bottom:12px">09 — Lookbook</p>
+          <h2 class="section-heading reveal reveal-delay-1" id="lookbook-baslik">Sonbahar 2025</h2>
+        </div>
+        <a href="#" class="btn btn-outline-dark btn-sm reveal reveal-delay-2">Galeriyi Gör →</a>
+      </div>
+
+      <div class="lookbook-layout reveal">
+        <!-- Ana görsel -->
+        <div class="lb-main">
+          <div class="lb-overlay"></div>
+          <div class="lb-pattern"></div>
+          <div class="lb-image-scale">
+            <svg width="100%" height="100%" viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+              <rect width="500" height="700" fill="#1A1714"/>
+              <path d="M100 100 Q180 70 250 90 Q320 70 400 100 L410 580 Q330 640 250 645 Q170 640 90 580 Z" fill="#C4A882" opacity="0.12"/>
+              <path d="M130 120 Q180 95 250 108 Q320 95 370 120 L375 560 Q315 615 250 618 Q185 615 125 560 Z" fill="#8B7355" opacity="0.1"/>
+              <circle cx="250" cy="350" r="80" fill="none" stroke="#C4A882" stroke-width="0.5" opacity="0.2"/>
+              <line x1="50" y1="350" x2="450" y2="350" stroke="#C4A882" stroke-width="0.3" opacity="0.15"/>
+              <line x1="250" y1="50" x2="250" y2="650" stroke="#C4A882" stroke-width="0.3" opacity="0.15"/>
+            </svg>
+          </div>
+          <div class="lb-content">
+            <p class="lb-tag">Sonbahar 2025</p>
+            <h3 class="lb-title">Sade ama<br>söyleyen.</h3>
+            <button class="btn btn-outline-light" style="padding:10px 22px;font-size:10px">Galeriyi Gör</button>
+          </div>
+        </div>
+
+        <!-- Alt görseller -->
+        <div class="lb-item">
+          <div class="lb-overlay"></div>
+          <svg width="100%" height="100%" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+            <rect width="300" height="300" fill="#2C2420"/>
+            <circle cx="150" cy="120" r="55" fill="none" stroke="#C4A882" stroke-width="0.6" opacity="0.3"/>
+            <path d="M70 200 Q150 170 230 200 L230 300 L70 300 Z" fill="#C4A882" opacity="0.08"/>
+          </svg>
+          <div class="lb-content">
+            <p class="lb-tag">Atölye</p>
+            <h3 class="lb-title" style="font-size:18px">Kumaş Seçimi</h3>
+          </div>
+        </div>
+
+        <div class="lb-item" style="background:#C4A882; justify-content:flex-start; padding-top:20px">
+          <svg width="100%" height="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%">
+            <rect width="300" height="200" fill="#C4A882"/>
+            <line x1="0" y1="50" x2="300" y2="50" stroke="#1A1714" stroke-width="0.4" opacity="0.15"/>
+            <line x1="0" y1="100" x2="300" y2="100" stroke="#1A1714" stroke-width="0.4" opacity="0.15"/>
+            <line x1="0" y1="150" x2="300" y2="150" stroke="#1A1714" stroke-width="0.4" opacity="0.15"/>
+            <line x1="75" y1="0" x2="75" y2="200" stroke="#1A1714" stroke-width="0.4" opacity="0.15"/>
+            <line x1="150" y1="0" x2="150" y2="200" stroke="#1A1714" stroke-width="0.4" opacity="0.15"/>
+            <line x1="225" y1="0" x2="225" y2="200" stroke="#1A1714" stroke-width="0.4" opacity="0.15"/>
+          </svg>
+          <div class="lb-content">
+            <p class="lb-tag" style="color:rgba(26,23,20,0.5)">Stil Rehberi</p>
+            <h3 class="lb-title" style="font-size:18px;color:var(--cr)">Kış Layering</h3>
+            <p style="font-size:11px;color:rgba(26,23,20,0.6);margin-top:4px;font-weight:300">7 kombinasyon →</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MÜŞTERİ HİKAYELERİ
+  ============================================= -->
+  <section id="hikayeler" aria-labelledby="hikayeler-baslik">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow reveal" style="margin-bottom:12px">11 — Müşteri Hikayeleri</p>
+          <h2 class="section-heading reveal reveal-delay-1" id="hikayeler-baslik">Onlar anlatsın.</h2>
+        </div>
+      </div>
+
+      <div class="stories-grid">
+        <article class="story-card reveal">
+          <div class="story-quote-mark">"</div>
+          <div class="story-meta">
+            <div class="story-avatar">A</div>
+            <div>
+              <p class="story-name">Ayşe Kara</p>
+              <p class="story-occasion">Düğün · Özel Tasarım</p>
+            </div>
+          </div>
+          <blockquote class="story-text">
+            Düğün gecem için hayalimde ne vardı bilmiyordum. Atölyeyle 20 dakika konuştum ve üç gün sonra eskizim hazırdı. Tam istediğim gibiydi.
+          </blockquote>
+          <a href="#" class="story-cta">Süreci Oku →</a>
+        </article>
+
+        <article class="story-card reveal reveal-delay-1">
+          <div class="story-quote-mark">"</div>
+          <div class="story-meta">
+            <div class="story-avatar">M</div>
+            <div>
+              <p class="story-name">Murat Demir</p>
+              <p class="story-occasion">İş Toplantısı · Keten Takım</p>
+            </div>
+          </div>
+          <blockquote class="story-text">
+            Hazır takım elbise vücuduma hiç uymuyordu. İlk kez ölçüme göre yapılmış bir takım giydim — fark inanılmaz. Bir daha mağazaya gitmeyeceğim.
+          </blockquote>
+          <a href="#" class="story-cta">Süreci Oku →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ÖZEL SİPARİŞ FORMU
+  ============================================= -->
+  <section id="ozel-siparis" aria-labelledby="siparis-baslik">
+    <div class="container">
+      <div class="order-layout">
+
+        <!-- Sol: Bilgi -->
+        <div class="order-info">
+          <p class="eyebrow reveal" style="margin-bottom:16px">07 — Özel Sipariş</p>
+          <h2 class="order-heading reveal reveal-delay-1" id="siparis-baslik">Tasarımını<br>hayata geçirelim.</h2>
+          <p class="order-desc reveal reveal-delay-2">
+            Bir fikrin, referansın, hatta sadece bir duygun yeterli. Tasarımcımız 24 saat içinde seninle iletişime geçer.
+          </p>
+          <ul class="order-promises reveal reveal-delay-3">
+            <li class="promise-item">
+              <span class="promise-dot"></span>
+              <span>Ücretsiz ön görüşme — yükümlülük yok</span>
+            </li>
+            <li class="promise-item">
+              <span class="promise-dot"></span>
+              <span>48 saat içinde ilk eskiz ve kumaş önerisi</span>
+            </li>
+            <li class="promise-item">
+              <span class="promise-dot"></span>
+              <span>Birebir ölçü alma — atölyede veya online</span>
+            </li>
+            <li class="promise-item">
+              <span class="promise-dot"></span>
+              <span>₺2.000'den başlayan fiyatlar, şeffaf süreç</span>
+            </li>
+            <li class="promise-item">
+              <span class="promise-dot"></span>
+              <span>Memnun kalmazsan değişim garantisi</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sağ: Form -->
+        <div class="order-form reveal reveal-delay-2">
+          <p class="eyebrow--amber" style="font-size:9px;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;margin-bottom:10px">Ücretsiz Ön Görüşme</p>
+          <h3 class="form-title">Tasarımını Anlat</h3>
+          <p class="form-sub">24 saat içinde dönüş · Tasarımcıyla birebir görüşme</p>
+
+          <form id="order-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Ad Soyad</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Adınız" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">E-posta</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="product-type">Ürün Tipi</label>
+                <select class="form-select" id="product-type" name="product-type">
+                  <option value="">Tür seçin</option>
+                  <option>Palto / Kaban</option>
+                  <option>Elbise</option>
+                  <option>Takım Elbise</option>
+                  <option>Ceket</option>
+                  <option>Diğer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="budget">Bütçe Aralığı</label>
+                <select class="form-select" id="budget" name="budget">
+                  <option value="">Aralık seçin</option>
+                  <option>₺2.000 – ₺4.000</option>
+                  <option>₺4.000 – ₺8.000</option>
+                  <option>₺8.000 – ₺15.000</option>
+                  <option>₺15.000+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Kullanım Amacı</label>
+              <div class="form-checkboxes">
+                <label class="check-label"><input type="checkbox" name="purpose" value="dugun"> Düğün / Nişan</label>
+                <label class="check-label"><input type="checkbox" name="purpose" value="is"> İş Toplantısı</label>
+                <label class="check-label"><input type="checkbox" name="purpose" value="gunluk"> Günlük</label>
+                <label class="check-label"><input type="checkbox" name="purpose" value="davet"> Özel Davet</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="description">Fikrin / Referans Açıklaması</label>
+              <textarea class="form-textarea" id="description" name="description" placeholder="Hayalinizdeki parçayı anlatın — renk, kumaş, kesim, ilham kaynağınız..."></textarea>
+              <p class="form-hint">İsterseniz referans görsel linki de ekleyebilirsiniz.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Tercih Ettiğiniz İletişim</label>
+              <div style="display:flex;gap:20px">
+                <label class="check-label"><input type="radio" name="contact" value="eposta" checked style="accent-color:var(--cm)"> E-posta</label>
+                <label class="check-label"><input type="radio" name="contact" value="whatsapp" style="accent-color:var(--cm)"> WhatsApp</label>
+                <label class="check-label"><input type="radio" name="contact" value="telefon" style="accent-color:var(--cm)"> Telefon</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-full" style="padding:16px;font-size:11px;letter-spacing:0.16em">
+              Gönder — Ücretsiz Danışma Başlat
+            </button>
+            <p class="form-note">Kişisel verileriniz yalnızca sipariş sürecinde kullanılır.</p>
+          </form>
+
+          <!-- Success state -->
+          <div class="form-success" id="form-success">
+            <div class="success-icon">✓</div>
+            <h3 class="success-title">Talebiniz Alındı</h3>
+            <p class="success-text">24 saat içinde size dönüş yapacağız.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HAKKINDA / ATÖLYE
+  ============================================= -->
+  <section id="hakkinda" aria-labelledby="hakkinda-baslik">
+    <div class="container">
+      <div class="about-layout reveal">
+        <div class="about-visual">
+          <div class="about-visual-pattern"></div>
+          <p class="about-location">İstanbul, Karaköy · 2018'den beri</p>
+          <p class="about-visual-title">Atölye 12 m² —<br>her şey burada başlar.</p>
+        </div>
+        <div class="about-content">
+          <p class="eyebrow about-eyebrow">Biz kimiz</p>
+          <h2 class="about-heading" id="hakkinda-baslik">Hazır giyim<br>seni temsil etmiyorsa.</h2>
+          <p class="about-body">
+            2018'den beri Karaköy'deki küçük atölyemizde, her müşterimiz için sıfırdan tasarım yapıyoruz. El seçimi kumaşlar, birebir ölçü alma ve sabırla işlenmiş dikişler — bu bizim metodumuz.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="stat-num" data-target="400">0</div>
+              <p class="stat-label">Özel Parça</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="7">0</div>
+              <p class="stat-label">Yıl</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="97">0</div>
+              <p class="stat-label">% Memnuniyet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BLOG
+  ============================================= -->
+  <section id="blog" aria-labelledby="blog-baslik">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow reveal" style="margin-bottom:12px">12 — Blog & İçerik</p>
+          <h2 class="section-heading reveal reveal-delay-1" id="blog-baslik">Stil rehberleri,<br>atölye hikayeleri.</h2>
+        </div>
+        <a href="#" class="btn btn-outline-dark btn-sm reveal reveal-delay-2">Tüm Yazılar →</a>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card reveal">
+          <div class="blog-image">
+            <div class="blog-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 400 180" style="position:absolute;inset:0;width:100%;height:100%">
+                <rect width="400" height="180" fill="#E8E2D9"/>
+                <circle cx="200" cy="90" r="50" fill="none" stroke="#8B7355" stroke-width="0.7" opacity="0.4"/>
+                <line x1="0" y1="90" x2="400" y2="90" stroke="#8B7355" stroke-width="0.4" opacity="0.2"/>
+                <path d="M80 140 Q200 60 320 140" fill="none" stroke="#C4A882" stroke-width="0.8" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-cat">Stil Rehberi</p>
+            <h3 class="blog-title">Kış Layering: 7 Kombinasyon, 3 Temel Parça</h3>
+            <p class="blog-date">12 Kasım 2025</p>
+            <span class="blog-read-more">Okumaya Devam Et →</span>
+          </div>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-1">
+          <div class="blog-image" style="background:#2C2420">
+            <div class="blog-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 400 180" style="position:absolute;inset:0;width:100%;height:100%">
+                <rect width="400" height="180" fill="#2C2420"/>
+                <rect x="120" y="30" width="160" height="120" fill="none" stroke="#C4A882" stroke-width="0.5" opacity="0.3"/>
+                <line x1="200" y1="30" x2="200" y2="150" stroke="#C4A882" stroke-width="0.4" opacity="0.2"/>
+                <circle cx="200" cy="90" r="20" fill="#C4A882" opacity="0.1"/>
+              </svg>
+            </div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-cat">Üretim Süreci</p>
+            <h3 class="blog-title">Keten Kumaşın Hikayesi: Tarladan Atölyeye</h3>
+            <p class="blog-date">3 Kasım 2025</p>
+            <span class="blog-read-more">Okumaya Devam Et →</span>
+          </div>
+        </article>
+
+        <article class="blog-card reveal reveal-delay-2">
+          <div class="blog-image" style="background:#C4A882">
+            <div class="blog-image-inner">
+              <svg width="100%" height="100%" viewBox="0 0 400 180" style="position:absolute;inset:0;width:100%;height:100%">
+                <rect width="400" height="180" fill="#C4A882"/>
+                <path d="M50 90 Q200 30 350 90" fill="none" stroke="#1A1714" stroke-width="0.8" opacity="0.2"/>
+                <path d="M50 110 Q200 50 350 110" fill="none" stroke="#1A1714" stroke-width="0.8" opacity="0.15"/>
+                <circle cx="200" cy="70" r="35" fill="#1A1714" opacity="0.08"/>
+              </svg>
+            </div>
+          </div>
+          <div class="blog-body">
+            <p class="blog-cat">Malzeme</p>
+            <h3 class="blog-title">Neden Yünü Severiz: Doğal Liflerin Avantajları</h3>
+            <p class="blog-date">25 Ekim 2025</p>
+            <span class="blog-read-more">Okumaya Devam Et →</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ERKEN ERİŞİM + DANIŞMA
+  ============================================= -->
+  <section id="erisim" aria-label="Erken erişim ve danışma">
+    <div class="container">
+      <div class="access-inner">
+        <div class="access-text">
+          <p class="eyebrow access-eyebrow">Koleksiyona Özel Erişim</p>
+          <h2 class="access-heading">Yeni Koleksiyonu<br>İlk Sen Gör</h2>
+          <p class="access-sub">Sıradan bülten değil · Erken erişim · Özel fiyat</p>
+        </div>
+        <div class="access-form">
+          <input class="access-input" type="email" placeholder="E-posta adresiniz" id="access-email" aria-label="E-posta adresi">
+          <button class="access-btn" onclick="subscribeEarlyAccess()">Erken Erişim Al</button>
+        </div>
+      </div>
+
+      <div class="consult-strip">
+        <p class="consult-text">Stile Danış — Ücretsiz Ön Görüşme</p>
+        <a href="#ozel-siparis" class="btn-consult">Randevu Al →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-logo">Atölye</div>
+          <p class="footer-tagline">Hazır giyim değil. El yapımı, ölçüye özel tasarım. Karaköy, İstanbul.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Pinterest">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.76 1.27-5.36 1.27-5.36s-.32-.65-.32-1.61c0-1.51.88-2.64 1.97-2.64.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.61 1.97 1.93 0 3.41-2.03 3.41-4.97 0-2.6-1.87-4.42-4.53-4.42-3.08 0-4.89 2.31-4.89 4.7 0 .93.36 1.93.8 2.47.09.11.1.2.08.31l-.3 1.22c-.05.19-.16.23-.37.14C5.4 15.3 4.5 13.41 4.5 11.8c0-3.49 2.54-6.71 7.33-6.71 3.85 0 6.84 2.74 6.84 6.4 0 3.82-2.41 6.9-5.75 6.9-1.12 0-2.18-.58-2.54-1.27l-.69 2.59c-.25.96-.93 2.16-1.39 2.89.67.21 1.38.32 2.2.32 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="TikTok">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.18 8.18 0 004.78 1.53V6.79a4.85 4.85 0 01-1.01-.1z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Sayfalar</p>
+          <ul class="footer-links-list">
+            <li><a href="#koleksiyon">Koleksiyon</a></li>
+            <li><a href="#ozel-siparis">Özel Sipariş</a></li>
+            <li><a href="#lookbook">Lookbook</a></li>
+            <li><a href="#hakkinda">Atölye Hakkında</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Sipariş</p>
+          <ul class="footer-links-list">
+            <li><a href="#">Sipariş Takip</a></li>
+            <li><a href="#">İade & Değişim</a></li>
+            <li><a href="#">Ödeme Yöntemleri</a></li>
+            <li><a href="#">Kargo Bilgisi</a></li>
+            <li><a href="#">Beden Rehberi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">İletişim</p>
+          <ul class="footer-links-list">
+            <li><a href="#">info@atolye.com</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">Karaköy, İstanbul</a></li>
+            <li><a href="#">SS: 10:00–18:00</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Atölye · El yapımı tasarım · İstanbul</p>
+        <div class="footer-legal">
+          <a href="#">Gizlilik</a>
+          <a href="#">Kullanım Koşulları</a>
+          <a href="#">KVKK</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
